@@ -42,8 +42,17 @@ public class ItemList {
         for (int i = 0; i < data; i++) {
             this.head = new Item(xulaID.get(rand.nextInt(9)), names.get(rand.nextInt(11)),
                     rand.nextInt(100),rand.nextInt(10), LocalDate.now().plusDays(rand.nextInt(5)));
+            this.append(head);
         }
     }
+
+    public void append( Item item){
+        ItemList temp = this;
+        while (temp.next != null)
+            temp = temp.next;
+        temp.next = new ItemList(item);
+    }
+
 
     public ItemList prepend(Item item){
         ItemList temp = new ItemList(item);
