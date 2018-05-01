@@ -7,14 +7,14 @@ import java.util.Random;
 
 public class ItemList {
     private Item head;
-    private  ItemList next;
+    private ItemList next;
 
     public ItemList(Item head) {
         this.head = head;
         this.next = null;
     }
 
-    public ItemList(int data){
+    public ItemList(int data) {
         ArrayList<Integer> xulaID = new ArrayList<>();
         xulaID.add(900199950);
         xulaID.add(900196650);
@@ -41,12 +41,12 @@ public class ItemList {
         Random rand = new Random();
         for (int i = 0; i < data; i++) {
             this.head = new Item(xulaID.get(rand.nextInt(9)), names.get(rand.nextInt(11)),
-                    rand.nextInt(100),rand.nextInt(10), LocalDate.now().plusDays(rand.nextInt(5)));
+                    rand.nextInt(100), rand.nextInt(10), LocalDate.now().plusDays(rand.nextInt(5)));
             this.append(head);
         }
     }
 
-    public void append( Item item){
+    public void append(Item item) {
         ItemList temp = this;
         while (temp.next != null)
             temp = temp.next;
@@ -54,7 +54,7 @@ public class ItemList {
     }
 
 
-    public ItemList prepend(Item item){
+    public ItemList prepend(Item item) {
         ItemList temp = new ItemList(item);
         temp.next = this;
         return temp;
@@ -64,10 +64,13 @@ public class ItemList {
 //
 //    }
 //
-//    public  ItemList size(){
-//
-//    }
-//
+
+    public int size() {
+        if (next == null) {
+            return 1;
+        }
+        return 1 + next.size();
+    }
 //    public ItemList get(Item item){
 //
 //    }
