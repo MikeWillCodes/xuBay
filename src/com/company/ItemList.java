@@ -72,10 +72,10 @@ public class ItemList {
         return 1 + next.size();
     }
 
-    public int get(int index){
+    public int get(int id){
         int indexCount = 0;
         ItemList temp = this;
-        while (index != indexCount){
+        while (id != indexCount){
             temp = temp.next;
             indexCount++;
         }
@@ -87,9 +87,6 @@ public class ItemList {
 
     @Override
     public String toString() {
-        return "ItemList{" +
-                "head=" + head +
-                ", next=" + next +
-                '}';
+        return "ItemList: " + head +" "+ next ;
     }
 }
