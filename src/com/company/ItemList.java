@@ -71,10 +71,16 @@ public class ItemList {
         }
         return 1 + next.size();
     }
-//    public ItemList get(Item item){
-//
-//    }
-//
+
+    public int get(int index){
+        int indexCount = 0;
+        ItemList temp = this;
+        while (index != indexCount){
+            temp = temp.next;
+            indexCount++;
+        }
+        return indexCount;
+    }
 //    public ItemList set(int index, Item item){
 //
 //    }

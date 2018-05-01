@@ -8,6 +8,7 @@ public class Main {
 
         ItemList items = new ItemList(5);
         System.out.println("The size of listings: " + items.size());
+        System.out.println("Get [i]: " + items.get(4));
         System.out.println("Listings: " + items);
 
 
