@@ -6,5 +6,8 @@ public class Main {
         System.out.println("\nWelcome to XUBay\n");
 
 
+        ItemList items = new ItemList(5);
+        System.out.println("Listings: " + items);
+
     }
 }

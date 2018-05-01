@@ -1,14 +1,40 @@
 package com.company;
 
+import java.time.LocalDate;
+
 public class Item {
+    private int id;
     private String name;
     private int price;
     private int quantity;
+    private LocalDate date;
 
-    public Item(String name, int price, int quantity) {
+
+    public Item(int id, String name, int price, int quantity, LocalDate date) {
+        this.id = id;
         this.name = name;
         this.price = price;
         this.quantity = quantity;
+        this.date = date;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                ", date=" + date +
+                '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -33,5 +59,13 @@ public class Item {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 }
