@@ -1,5 +1,6 @@
 package com.company;
 
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Random;
@@ -46,6 +47,15 @@ public class ItemList {
         }
     }
 
+    public boolean isEmpty(){
+        if (head == null){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     public void append(Item item) {
         ItemList temp = this;
         while (temp.next != null)
@@ -59,11 +69,6 @@ public class ItemList {
         temp.next = this;
         return temp;
     }
-
-//    public ItemList add(Item item){
-//
-//    }
-//
 
     public int size() {
         if (next == null) {
@@ -81,9 +86,10 @@ public class ItemList {
         }
         return indexCount;
     }
-//    public ItemList set(int index, Item item){
-//
-//    }
+
+    public ItemList set(int index, Item item){
+
+    }
 
     @Override
     public String toString() {
