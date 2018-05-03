@@ -43,7 +43,7 @@ public class ItemList {
         for (int i = 0; i < data; i++) {
             this.head = new Item(xulaID.get(rand.nextInt(9)), names.get(rand.nextInt(11)),
                     rand.nextInt(100), rand.nextInt(10), LocalDate.now().plusDays(rand.nextInt(5)));
-            this.append(head);
+            this.add(head);
         }
     }
 
@@ -56,7 +56,7 @@ public class ItemList {
         }
     }
 
-    public void append(Item item) {
+    public void add(Item item) {
         ItemList temp = this;
         while (temp.next != null)
             temp = temp.next;
@@ -85,10 +85,6 @@ public class ItemList {
             indexCount++;
         }
         return indexCount;
-    }
-
-    public ItemList set(int index, Item item){
-
     }
 
     @Override
