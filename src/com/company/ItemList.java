@@ -49,7 +49,15 @@ public class ItemList {
     }
 
     public ItemList get( ItemList head, int id){
+        ItemList temp = this;
+        while (this != null && this.id() != id){
+            temp = temp.next;
+        }
+        return temp;
+    }
 
+    public int id(){
+        return id();
     }
 
     public boolean isEmpty(){
@@ -82,14 +90,30 @@ public class ItemList {
         return 1 + next.size();
     }
 
-    public int get(int index){
-        int indexCount = 0;
-        ItemList temp = this;
-        while (temp != null){
-            temp = temp.next;
-            indexCount++;
-        }
-        return indexCount;
+//    public int get(int index){
+//        int indexCount = 0;
+//        ItemList temp = this;
+//        while (temp != null){
+//            temp = temp.next;
+//            indexCount++;
+//        }
+//        return indexCount;
+//    }
+
+    public Item getHead() {
+        return head;
+    }
+
+    public void setHead(Item head) {
+        this.head = head;
+    }
+
+    public ItemList getNext() {
+        return next;
+    }
+
+    public void setNext(ItemList next) {
+        this.next = next;
     }
 
     @Override
