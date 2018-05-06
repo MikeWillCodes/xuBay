@@ -47,6 +47,7 @@ public class ItemList {
         }
     }
 
+
     public boolean isEmpty(){
         if (head == null){
             return true;
@@ -77,10 +78,10 @@ public class ItemList {
         return 1 + next.size();
     }
 
-    public int get(int id){
+    public int get(int index){
         int indexCount = 0;
         ItemList temp = this;
-        while (id != indexCount){
+        while (temp != null){
             temp = temp.next;
             indexCount++;
         }
