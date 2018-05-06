@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 
+
 public class ItemList {
     private Item head;
     private ItemList next;
@@ -47,6 +48,9 @@ public class ItemList {
         }
     }
 
+    public ItemList get( ItemList head, int id){
+
+    }
 
     public boolean isEmpty(){
         if (head == null){
